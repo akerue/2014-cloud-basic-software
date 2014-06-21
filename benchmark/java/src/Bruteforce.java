@@ -28,7 +28,7 @@ public class Bruteforce {
                         for (estimated_ascii[4] = (byte)ASCII_0; estimated_ascii[4] <= ASCII_Z; estimated_ascii[4]++ ) {
                             for (estimated_ascii[5] = (byte)ASCII_0; estimated_ascii[5] <= ASCII_Z; estimated_ascii[5]++ ) {
                                 estimated = new String(estimated_ascii, "ASCII");
-                                if (estimated == password) {
+                                if (estimated.equals(password)) {
                                     System.out.println("PASSWORD => " + estimated.toString());
                                     return;
                                 }
