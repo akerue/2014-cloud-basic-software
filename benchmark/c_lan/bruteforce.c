@@ -4,10 +4,10 @@
 #include <time.h>
 
 // Password (Number)
-#define PASSWORD "PASSWD"
+#define PASSWORD "PASS1"
 
 // Length of password
-#define PASSLENGTH 6
+#define PASSLENGTH 5
 
 // "0" of ASCII
 #define ASCII_0 48 
@@ -20,12 +20,10 @@ void brute_force() {
 			for (estimated[2] = ASCII_0; estimated[2] <= ASCII_Z; estimated[2] += 1) {
 				for (estimated[3] = ASCII_0; estimated[3] <= ASCII_Z; estimated[3] += 1) {
 					for (estimated[4] = ASCII_0; estimated[4] <= ASCII_Z; estimated[4] += 1) {
-						for (estimated[5] = ASCII_0; estimated[5] <= ASCII_Z; estimated[5] += 1) {
-							// printf("ESTIMATE => %s\n", estimated);
-							if (strncmp(estimated, PASSWORD, PASSLENGTH) == 0) {
-								printf("PASSWORD => %s\n", estimated);
-								return;
-							}
+						// printf("ESTIMATE => %s\n", estimated);
+						if (strncmp(estimated, PASSWORD, PASSLENGTH) == 0) {
+							printf("PASSWORD => %s\n", estimated);
+							return;
 						}
 					}
 				}
